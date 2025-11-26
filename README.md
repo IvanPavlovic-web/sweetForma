@@ -8,7 +8,7 @@
 Website for a **custom 3D-printed cookie mold manufacturing business**, featuring a clean product showcase and direct WhatsApp integration for customer inquiries. Traditional contact forms and call-to-action buttons are removed, focusing entirely on instant communication via WhatsApp as requested by the Client. **Built with HTML, CSS, and JavaScript**.
 
 ## Demo
-View the live website here: [SweetForma Demo]([https://your-demo-link.com](https://ivanpavlovic-web.github.io/sweetForma/))
+View the live website here: [SweetForma Demo](https://ivanpavlovic-web.github.io/sweetForma/)
 FYI, It was never deployed as the client gave up on this business idea, and being new to programming, I didn't ask for payment in advance...
 
 ## Features

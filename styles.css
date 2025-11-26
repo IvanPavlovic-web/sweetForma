@@ -1,0 +1,745 @@
+/* ****************************************** */
+/* ***********GLOBALNI ELEMENTI************** */
+/* ****************************************** */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.color {
+  background: linear-gradient(to right, #e6d1e7 50%, #e6bcd6 50%);
+}
+.color-2 {
+  background-color: #ceb3cb;
+}
+
+/* ****************************************** */
+/* *************HEADER ELEMENTI************** */
+/* ****************************************** */
+
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger-btn span {
+  display: block;
+  height: 2px;
+  background-color: #b08ead;
+  border-radius: 2px;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid #e6d7e2;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-logotip {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 36px;
+  color: #c09abb;
+  margin: 0;
+}
+
+.nav-box {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-link {
+  position: relative;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #b08ead;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding-bottom: 4px;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #a78ba4;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #8c6b85;
+  cursor: pointer;
+}
+
+/* ****************************************** */
+/* ***************HERO ELEMENTI************** */
+/* ****************************************** */
+
+.hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90vh;
+  background: linear-gradient(to right, #e6d1e7 50%, #e6bcd6 50%);
+  overflow: hidden;
+  padding: 40px 0 40px 60px;
+  gap: 0;
+}
+
+.hero-background {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  max-width: 110%;
+  max-height: 100vh;
+  object-fit: contain;
+  margin-right: -60px; /* Preklapanje slike ka tekstu */
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+.hero-text-box {
+  flex: 1;
+  background-color: #b48db3;
+  padding: 40px;
+  color: #fff;
+  font-family: "Cormorant Garamond", serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+.hero-new {
+  font-size: 14px;
+  color: #f6f6f6;
+  font-family: "Roboto", serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-title {
+  font-size: 45px;
+  color: #f6f6f6;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.hero-description {
+  font-size: 18px;
+  color: #f7f2f7;
+  font-family: "Cormorant Garamond", serif;
+  margin-top: 10px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.hero-button {
+  font-size: 16px;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  text-decoration: none;
+  width: fit-content;
+  transition: opacity 0.3s ease;
+}
+
+.hero-button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+/* ****************************************** */
+/* ***********OVERVIEW ELEMENTI************** */
+/* ****************************************** */
+
+.overview-section {
+  position: relative;
+
+  min-height: 90vh;
+  overflow: hidden;
+  padding: 98px 0 98px 0;
+  gap: 0;
+}
+.overview-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overview-main-text {
+  font-family: "Cormorant Garamond", serif;
+  color: #b99bb6;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 28px;
+}
+.overview-side-text {
+  font-family: "Cormorant Garamond", serif;
+  color: #5f4d5d;
+  font-weight: 400;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 92px 18px 92px;
+  text-align: center;
+}
+.overview-btn {
+  font-family: "Roboto", serif;
+  color: #b99bb6;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 14px;
+  border-radius: 9999px;
+  padding: 12px 24px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #b99bb6;
+  display: block;
+  margin: 0 auto 64px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.overview-btn:hover {
+  background-color: #b99bb6;
+  color: #fff;
+}
+.overview-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.overview-img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+.deco-box {
+  padding: 24px 12px;
+  background-color: #ceb3cb;
+}
+.deco-text {
+  font-family: "Cormorant Garamond", serif;
+  color: #fff;
+  font-weight: 600;
+  font-size: 25px;
+  height: 30px;
+}
+.deco-link {
+  font-family: "Cormorant Garamond", serif;
+  color: #fff;
+  font-weight: 600;
+  font-size: 19px;
+  height: 30px;
+  font-style: italic;
+}
+.overview-wrapper {
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: transform, opacity;
+}
+.overview-wrapper.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.overview-wrapper:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ****************************************** */
+/* **************ABOUT ELEMENTI************** */
+/* ****************************************** */
+
+.abt-section {
+  position: relative;
+
+  min-height: 90vh;
+  overflow: hidden;
+  padding: 98px 0 98px 0;
+  gap: 0;
+}
+
+.z-left-container,
+.z-right-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 64px 0;
+  /* border-bottom: 1px solid rgba(95, 77, 93, 0.1); */
+}
+.z-image {
+  width: 55%;
+  height: auto;
+  border: 17px solid #f6f2f5;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.z-main-text {
+  font-family: "Roboto", serif;
+  color: #b99bb6;
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.z-side-text {
+  font-family: "Cormorant Garamond", serif;
+  color: #5f4d5d;
+  font-weight: 400;
+  font-size: 22px;
+  text-align: justify;
+}
+.z-left-container:last-child,
+.z-left-container:last-of-type,
+.z-right-container:last-child,
+.z-right-container:last-of-type {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* ****************************************** */
+/* ***************SHOP ELEMENTI************** */
+/* ****************************************** */
+
+/* .shop-flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+} */
+.shop-grid-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.shop-flex-box:last-child {
+  margin-bottom: 0;
+}
+.shop-img {
+  width: 350px;
+  height: 350px;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.2));
+}
+.shop-main-text {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-weight: 500;
+  height: 30px;
+  color: #5f4d5d;
+  text-align: center;
+  margin: 8px 0;
+}
+.shop-price-text {
+  font-family: "Roboto", serif;
+  text-align: center;
+  color: #b0b0b0;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.shop-section {
+  position: relative;
+
+  min-height: 90vh;
+  overflow: hidden;
+  padding: 98px 0 98px 0;
+  gap: 0;
+}
+.shop-el {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: transform, opacity;
+}
+
+.shop-el.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ****************************************** */
+/* ************KONTAKT ELEMENTI************** */
+/* ****************************************** */
+
+.contact-section {
+  padding: 98px 0;
+}
+.social-icons-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 30px;
+}
+.social-text {
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  margin-bottom: 48px;
+  font-weight: 600;
+  height: 30px;
+  color: #f1e6f2;
+}
+.social-btn {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background-color: #f1e6f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #7a5c7f;
+  font-size: 38px;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  transform: scale(1.1);
+  background-color: #d6bbd3;
+  color: #fff;
+}
+
+.instagram:hover {
+  background-color: #e1306c;
+}
+.viber:hover {
+  background-color: #7360f2;
+}
+.whatsapp:hover {
+  background-color: #25d366;
+}
+.facebook:hover {
+  background-color: #1877f2;
+}
+
+/* ****************************************** */
+/* *************FOOTER ELEMENTI************** */
+/* ****************************************** */
+
+.header-logotip-footer {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  font-size: 48px;
+  color: #c09abb;
+  margin: 0;
+}
+.site-footer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f4f8;
+  border-top: 1px solid rgba(95, 77, 93, 0.1);
+}
+
+.footer-text {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 14px;
+  color: #7a5c7f;
+  margin-top: 8px;
+}
+.footer-text > span {
+  font-style: italic;
+}
+.footer-legal {
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 12px;
+  color: #9c86a0;
+  line-height: 1.6;
+  padding: 10px 0 0;
+}
+
+/* ****************************************** */
+/* ***************MEDIA QUERY**************** */
+/* ****************************************** */
+
+/* Tableti (iPad), manji laptopi */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 38px;
+  }
+  .hero-description {
+    font-size: 16px;
+  }
+  .hero-text-box {
+    padding: 30px;
+  }
+  .overview-img {
+    height: 320px;
+    width: 320px;
+  }
+  .shop-img {
+    height: 320px;
+    width: 320px;
+  }
+}
+
+/* Tableti u portretu, veći telefoni u landscape */
+@media (max-width: 768px) {
+  .hero-section {
+    display: none;
+  }
+  .overview-box {
+    display: none;
+  }
+  .overview-section {
+    padding: 48px 0;
+    min-height: 60vh;
+  }
+  .z-left-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .z-left-container:last-child {
+    padding-top: 48px;
+  }
+  .z-right-container {
+    display: none;
+  }
+  .z-image {
+    width: 90%;
+  }
+  .z-text-box {
+    padding: 0 38px;
+  }
+  .z-main-text,
+  .z-side-text {
+    text-align: center;
+  }
+  .z-main-text {
+    font-size: 36px;
+    font-weight: 500;
+  }
+  .shop-grid-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .shop-img {
+    width: 340px;
+    height: 340px;
+  }
+}
+
+/* Telefoni (iPhone Plus, Galaxy itd.) */
+@media (max-width: 600px) {
+  .header-logotip {
+    font-size: 32px;
+  }
+  .nav-box {
+    gap: 16px;
+  }
+  .overview-side-text {
+    padding: 0 64px 18px 64px;
+  }
+  .z-main-text {
+    font-size: 32px;
+  }
+  .shop-img {
+    width: 280px;
+    height: 280px;
+  }
+  .social-text {
+    font-size: 26px;
+  }
+}
+
+/* Manji telefoni (iPhone SE, stariji uređaji) */
+@media (max-width: 480px) {
+  .hamburger-btn {
+    display: flex;
+  }
+  .hamburger-btn.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger-btn.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-btn.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .nav-box {
+    position: fixed;
+    top: 60px; /* prilagodi visinu headera */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .nav-box.open {
+    display: flex;
+  }
+  .header-container {
+    padding: 12px 0;
+  }
+  .overview-main-text {
+    text-align: center;
+  }
+  .overview-section {
+    padding: 32px 0;
+  }
+  .abt-section {
+    padding: 48px 0;
+  }
+  .z-side-text {
+    font-size: 20px;
+  }
+  .z-image {
+    width: 100%;
+    border: 12px solid #f6f2f5;
+  }
+  .shop-grid-box {
+    grid-template-columns: 1fr;
+  }
+  .shop-img {
+    width: 365px;
+    height: 365px;
+  }
+  .shop-section {
+    padding: 48px 0;
+  }
+  .shop-main-text {
+    font-size: 28px;
+  }
+  .shop-price-text {
+    font-size: 18px;
+  }
+  .social-btn {
+    width: 72px;
+    height: 72px;
+  }
+  .contact-section {
+    padding: 48px 0;
+  }
+  .social-text {
+    font-size: 22px;
+  }
+}
+
+/* Najmanji uređaji (npr. stari Android) */
+@media (max-width: 375px) {
+  .social-btn {
+    width: 68px;
+    height: 68px;
+  }
+  .overview-side-text {
+    padding: 0 28px 18px 28px;
+  }
+  .z-text-box {
+    padding: 0 28px;
+  }
+}
+
+/* Ekstremno mali uređaji */
+@media (max-width: 320px) {
+  .shop-img {
+    width: 300px;
+    height: 300px;
+  }
+  .shop-main-text {
+    font-size: 24px;
+  }
+  .shop-price-text {
+    font-size: 18px;
+  }
+  .social-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 32px;
+  }
+}
